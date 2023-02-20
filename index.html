@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/neat.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://kit.fontawesome.com/962151e168.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <script src="https://unpkg.com/@webcomponents/custom-elements@1.2.0/custom-elements.min.js"></script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <script src="scripts/codemirror.js"></script>
+    <script src="scripts/codemirrorsql.js"></script>
+    <script src="scripts/autorefresh.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/loadSQL.js"></script>
+    <script>
+        window.onload = () => loadData('https://www.happyafloat.com/DataBases/Lego.sqlite'); loadsql("lego.sql");
+    </script>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <title>SQL Data Analyst Portfolio</title>
+</head>
+
+<body>
+    <div id="header">
+        <h2 class="display-2  light-blue-text darken-1">Jason Muteham</h2>
+        <h3 class="lighten-3 grey-text">Data Analyst</h3>
+        <h3 class="lighten-3 grey-text">SQL Portfolio Project</h3>  
+        <h4 class="lighten-3 grey-text">ancientwrangler@gmail.com</h4>
+        <div class="row myspace">
+
+            <a href="mailto:ancientwrangler@gmail.com?Subject=Hello Jason" target="_blank">
+                <i class="fas fa-envelope fa-3x tooltipped" data-position="bottom" data-tooltip="Send me an Email"></i>
+            </a>
+            <a href="https://github.com/JasonMuteham" target="_blank">
+                <i class="fab fa-github fa-3x tooltipped" data-position="bottom" data-tooltip="Github"></i>
+            </a>
+        </div>
+    </div>
+
+    <h2 class="display-2  light-blue-text darken-1">Lego Bricks Analysis</h2>
+    <div class="container">
+        <div id="mySQL">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.1/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.materialboxed').materialbox();
+            $('.tooltipped').tooltip();
+        });
+    </script>
+
+</body>
+
+</html>
