@@ -35,7 +35,9 @@ FROM sets
 
 /*markdown
 **Q. If you wanted to make every set released how many sets & parts would be required, include mini figures?**
+*/
 
+/*markdown
 Note: Sets can contain multiples of other sets, we are assuming that reusing sets is not allowed!
 */
 
