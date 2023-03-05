@@ -79,7 +79,7 @@ GROUP BY year
 ORDER By year;
 
 /*markdown
-![Chart](images/Sets%20Released%20vs%20Release%20Year.svg)
+![Chart](Images/Sets%20Released%20vs%20Release%20Year.svg)
 */
 
 /*markdown
