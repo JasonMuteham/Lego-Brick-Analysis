@@ -173,7 +173,7 @@ class sqlExercise extends HTMLElement {
   //  resetButton.type = 'button';
  //   resetButton.value = 'Reset';
     resetButton.className = 'btn-flat reset-button'
-    resetButton.innerHTML = `<i class="fas fa-undo"></i>`
+    resetButton.innerHTML = `<i class="fas fa-window-close"></i>`
     resetButton.type = 'button';
     resetButton.onclick = (e) => {
       editor.setValue(defaultText);
