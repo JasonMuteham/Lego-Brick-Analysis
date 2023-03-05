@@ -16,7 +16,9 @@ Create a report to summarize your findings. Include:
 /*markdown
 ![rebrickable schema](https://rebrickable.com/static/img/diagrams/downloads_schema_v3.png)
 Schema & data from [rebrickable](https://rebrickable.com)
+*/
 
+/*markdown
 ---
 */
 
