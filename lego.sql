@@ -54,14 +54,11 @@ SELECT SUM(1) as num_sets, SUM(s.num_parts) as tot_parts
 FROM inventories AS i
 INNER JOIN sets as s
 USING(set_num)
-
 UNION ALL
-
 SELECT SUM(inv.quantity) as num_sets, SUM(inv.quantity * ss.num_parts) as tot_parts
 FROM inventory_sets AS inv
 INNER JOIN sets as ss
 USING(set_num)
-
 UNION ALL
 --minifigures have parts but are not sets
 SELECT SUM(0) as num_sets, SUM(im.quantity * m.num_parts) as tot_parts
@@ -124,9 +121,7 @@ INNER JOIN sets as s
 USING(set_num)
 WHERE s.year < 2023
 GROUP BY s.year
-
 UNION ALL
-
 SELECT ss.year as year, SUM(inv.quantity) as num_sets, SUM(inv.quantity * ss.num_parts) as tot_parts
 FROM inventory_sets AS inv
 INNER JOIN sets as ss
