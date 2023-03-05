@@ -23,6 +23,10 @@ Schema & data from [rebrickable](https://rebrickable.com)
 */
 
 /*markdown
+**Warning** - this page may be slow to run as the 100mb database loads to local memory. Running the SQL may also be slow. 
+*/
+
+/*markdown
 **Q. What is the average number of Lego sets and parts released each year, excluding mini figures?**
 */
 
@@ -114,26 +118,6 @@ LIMIT 10
 
 SELECT COUNT(sets.name) AS 'Total Sets', (SELECT COUNT(name) FROM minifigs) AS 'Total Mini figures'
 FROM sets
-
-SELECT year AS 'Year', SUM(num_sets) as 'Sets',SUM(tot_parts) AS 'No. Parts Required'
-FROM (
-SELECT s.year as year, SUM(1) as num_sets, SUM(s.num_parts) as tot_parts
-FROM inventories AS i
-INNER JOIN sets as s
-USING(set_num)
-WHERE s.year < 2023
-GROUP BY s.year
-UNION ALL
-SELECT ss.year as year, SUM(inv.quantity) as num_sets, SUM(inv.quantity * ss.num_parts) as tot_parts
-FROM inventory_sets AS inv
-INNER JOIN sets as ss
-USING(set_num)
-WHERE ss.year < 2023
-GROUP BY ss.year
-)
-WHERE year BETWEEN '2010' AND '2022'
-GROUP BY year
-ORDER BY year DESC
 
 /*markdown
 **Q. How many Star Wars themed set are there?**
