@@ -1,4 +1,8 @@
 /*markdown
+![Lego](https://cdn.rebrickable.com/media/thumbs/sets/700.3-1/17298.jpg/1000x800p.jpg)
+*/
+
+/*markdown
 ---
 */
 
