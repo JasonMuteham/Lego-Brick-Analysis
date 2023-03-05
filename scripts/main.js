@@ -132,7 +132,7 @@ class sqlExercise extends HTMLElement {
     editor.refresh();
 
 //    var runButton = `<input class="sql-exercise-submit" type="submit" value="Run &#x21e9;" disabled>`;
-    var runButton = `<button class="btn-flat" type="submit" name="action"><i class="fas fa-play"></i></button>`
+    var runButton = `<button class="btn-flat" type="submit" name="action"><i class="fas fa-play tooltipped" data-position="bottom" data-tooltip="Execute SQL"></i></button>`
     inputArea.insertAdjacentHTML("beforeend", runButton);
 
     form['onsubmit'] = (e) => {
@@ -169,17 +169,13 @@ class sqlExercise extends HTMLElement {
 
     var resetButton = document.createElement('button');
 
-
-  //  resetButton.type = 'button';
- //   resetButton.value = 'Reset';
     resetButton.className = 'btn-flat reset-button'
-    resetButton.innerHTML = `<i class="fas fa-window-close"></i>`
+    resetButton.innerHTML = `<i class="fas fa-window-close tooltipped" data-position="bottom" data-tooltip="Hide Results"></i>`
     resetButton.type = 'button';
     resetButton.onclick = (e) => {
       editor.setValue(defaultText);
       outputBox.textContent = '';
     };
-//    let resetButt = `<button class="btn-flat" type="submit" name="action"><i class="fas fa-play"></i></button>`
     inputArea.appendChild(resetButton);
     form.appendChild(inputArea);
 
