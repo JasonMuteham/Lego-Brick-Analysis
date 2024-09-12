@@ -27,10 +27,6 @@ Schema & data from [rebrickable](https://rebrickable.com)
 */
 
 /*markdown
-**Warning** - this page may be slow to run as the 100mb database loads to local memory. Running the SQL may also be slow. 
-*/
-
-/*markdown
 **Q. What is the average number of Lego sets and parts released each year, excluding mini figures?**
 */
 
